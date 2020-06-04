@@ -1,0 +1,125 @@
+\documentclass[two column, twoside, a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage[backend=biber, maxbibnames=3, style=nature, autocite=inline]{biblatex}
+\usepackage[polish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{blindtext}
+\usepackage{cuted}
+\usepackage{dblfloatfix}
+\usepackage{tikz}
+\usepackage[most]{tcolorbox}
+\usepackage[columnsep = 1cm,
+	        lmargin = 0.6in,
+	        rmargin = 0.4in,
+	        tmargin = 0.5in,
+	        bmargin = 0.65in,
+	        headsep = \baselineskip]{geometry}
+
+\addbibresource{$BIB}
+
+% Custom commands
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt, color = orange!90!white] (char) {#1};}}
+
+% Section Formatting
+\titleformat{\section}
+{\sc \bfseries \Large}
+{}
+{0em}
+{}[\titlerule]
+
+\titleformat{\subsection}
+{\bfseries \large}
+{}
+{0em}
+{}
+
+\titleformat{\subsubsection}
+{\bfseries}
+{}
+{0em}
+{}
+
+% Box formatting
+\tcbset{enhanced, colback=orange!15!white, boxrule = 1pt, coltitle = orange!90!white, colbacktitle = orange!15!white, colframe= orange!50!white}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE, LO]{Szkoła Główna Gospodarstwa Wiejskiego}
+\fancyhead[LE, RO]{Biotechnologia}
+\fancyfoot[RE, LO]{Jakub J. Guzek}
+\fancyfoot[LE, RO]{\thepage}
+\fancyfoot[CE,CO]{Zmiany w organizmie matki w czasie ciąży i Hormonalna regulacja porodu}
+\renewcommand{\footrulewidth}{0.05pt}
+
+\begin{document}
+
+\begin{strip}
+{\sc \bfseries \huge \fontfamily{phv}\selectfont Zmiany w organizmie matki w czasie ciąży i
+
+\vspace{2pt} hormonalna regulacja porodu} \vspace{\baselineskip}
+
+{\bfseries \Large Jakub J. Guzek}
+
+{Szkoła Główna Gospodarstwa Wiejskiego, Biotechnologia, Nr. albumu: 195528}\vspace{\baselineskip}
+
+\hrule
+\end{strip}
+
+\section{Wstęp}
+
+Ciąża, poród, a także inne procesy związane z rozrodem u ssaków są kontrolowane przez skomplikowany system, w którym ściśle współpracuje ze sobą wiele hormonów i substancji regulujących, przy jednoczesnej współpracy układu nerwowego. Taka regulacja neurohormonalna działająca na wielu poziomach, umożliwia dokładną kontrolę skomplikowanych procesów rozwojowych zachodzących w rozwijającym się zarodku oraz interakcję między procesami zachodzącymi w organizmie matki i dziecka. Wiele z substancji biorących udział w tej regulacji wykazuje działanie wielotorowe na wiele różnych tkanek zarówno u matki, jak i u dziecka i dodatkowo obecne są znaczne różnice w ich działaniu między gatunkami.
+Z tego powodu omówienie działania poszczególnych hormonów oddzielnie, zaciera istotę interakcji jakie zachodzą w tych procesach na wielu poziomach -- znacznie korzystniejsze jest omówienie działania tych substancji w ujęciu systemicznym, jako dynamicznego biologicznego systemu, którego struktura ulega znacznym zmianom w czasie. Omówienie jednak tego zagadnienia w ujęciu biologii systemów jest skomplikowane -- należy bowiem pamiętać, że sieć interakcji między hormonami i ich receptorami w czasie ciąży i porodu nie jest odizolowana od innych tego rodzaju sieci w reszcie organizmu oraz że wiele interakcji w takim układzie ma charakter zmienny nie tyko w zależności od czasu ale także od czynników środowiskowych.
+
+\begin{tcolorbox}[title=\hspace{-1.5em} \circled{\textbf{Box 1}} \textbf{\large{Wyjaśnienie skrótów}}]
+	\begin{description}
+		\item[GnRH] -- gonadoliberyna (\textit{ang. gonadotropin-releasing hormone})
+		\item
+	\item
+	\end{description}
+\end{tcolorbox}
+
+\section{Przed ciążą}
+
+Oogeneza rozpoczyna się u samic wielu gatunków ssaków już na etapie życia płodowego. Pierwotne komórki płciowe są po migracji do zawiązków gonad przekształcane w oogonia. Oogonia ulegają w dalszej kolejności wielu podziałom mitotycznym po których rozpoczyna się podział mejotyczny, który ulega zatrzymaniu na etapie profazy mejozy I -- komórka taka nazywa się oocytem I rzędu i może pozostawać w takim stadium przez długi czas aż samica osiągnie dojrzałość płciową. \autocite{Krzymowski2005}
+
+Po osiągnięciu przez samicę dojrzałości płciowej oocyty rosnących pęcherzyków jajnikowych przechodzą dalsze etapy podziału mejotycznego aż do ponownego zatrzymania procesu na etapie metafazy mejozy II \autocite{Sawicki2017}. Dojrzewanie pęcherzyków jajnikowych zachodzi cyklicznie od kiedy samica osiągnie dojrzałość płciową.
+
+\subsection{Regulacja czynności jajnika i dojrzewania pęcherzyków jajnikowych}
+
+
+\subsection{Owulacja}
+
+\blindtext
+\subsection{Regulacja powstawania, zanikania i utrzymywania ciałka żółtego}
+
+\blindtext
+\subsection{Zapłodnienie}
+
+\blindtext
+\section{Ciąża}
+
+\blindtext
+\subsection{Wczesna ciąża}
+
+\blindtext
+\subsection{Późna ciąża}
+
+\blindtext
+\section{Poród}
+
+\blindtext
+\section{Laktacja}
+
+\blindtext
+\section{Podsumowanie}
+
+\blindtext
+
+\printbibliography
+
+\end{document}
