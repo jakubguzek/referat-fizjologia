@@ -1,6 +1,7 @@
 \documentclass[two column, twoside, a4paper]{article}
 
 \usepackage[utf8]{inputenc}
+\usepackage{dblfloatfix}
 \usepackage{subcaption}
 \usepackage{float}
 \usepackage[backend=biber, maxbibnames=3, style=nature, autocite=inline]{biblatex}
@@ -10,7 +11,6 @@
 \usepackage{titlesec}
 \usepackage{blindtext}
 \usepackage{cuted}
-\usepackage{dblfloatfix}
 \usepackage{tikz}
 \usepackage[most]{tcolorbox}
 \usepackage[columnsep = 1cm,
@@ -54,17 +54,17 @@
 \fancyhead[LE, RO]{Biotechnologia}
 \fancyfoot[RE, LO]{Jakub J. Guzek}
 \fancyfoot[LE, RO]{\thepage}
-\fancyfoot[CE,CO]{Zmiany w organizmie matki w czasie ciąży i hormonalna regulacja porodu}
+\fancyfoot[CE,CO]{Zmiany w organizmie matki i dziecka w czasie ciąży, hormonalna regulacja porodu}
 \renewcommand{\footrulewidth}{0.05pt}
 
 \begin{document}
 
 \begin{strip}
-{\sc \bfseries \huge \fontfamily{phv}\selectfont Zmiany w organizmie matki w czasie ciąży i
+{\sc \bfseries \LARGE \fontfamily{phv}\selectfont Zmiany w organizmie matki i dziecka w czasie ciąży,
 
 \vspace{2pt} hormonalna regulacja porodu} \vspace{\baselineskip}
 
-{\bfseries \Large Jakub J. Guzek}
+{\bfseries \large Jakub J. Guzek}
 
 {Szkoła Główna Gospodarstwa Wiejskiego, Biotechnologia, Nr. albumu: 195528}\vspace{\baselineskip}
 
@@ -163,20 +163,88 @@ Plemnik po wniknięciu do oocytu zmienia jego fizjologię -- powoduje aktywację
 
 Opisane w poprzedniej sekcji zmiany hormonalne zachodzące w czasie cykli rozwoju pęcherzyków jajnikowych mają wpływ nie tylko na funkcjonowanie jajników, ale także na inne narządy rozrodcze, całą resztę organizmu, rosnący zarodek a także na zachowanie samicy. Wzrastający we krwi poziom estrogenów (zwłaszcza 17$\beta$-estradiolu) prowadzi do rozrostu błony śluzowej macicy w przygotowaniu na implantację zarodka. Dochodzi do rozrzedzenia śluzu w szyjce macicy w celu ułatwienia przepływu plemników. \autocite{Sawicki2017, Sadler2012}
 
+ \begin{figure}[tp]
+	 \begin{tcolorbox}
+		 \centering
+		 \begin{subfigure}[b]{0.51\textwidth}
+			 \includegraphics[width=\textwidth]{./figures/blastomeres.png}
+		\caption{Wczesna morula (nieskompaktowana)}\label{fig::blastomeres:a}
+		\end{subfigure}
+		 \begin{subfigure}[b]{0.4755\textwidth}
+			 \includegraphics[width=\textwidth]{./figures/blastomeres2.png}
+			 \caption{Późna morula (skompaktowana)}\label{fig::blastomeres:b}
+		\end{subfigure}
+		 \caption{Zdjęcia ze skaningowego mikroskopu elektronowego przedstawiające morulę mysich zarodków w (a) nieskompaktowanym i (b) skompaktowanym stanie. Na podstawie: (Sadler, 2012)}\label{fig::blastomeres}
+	\end{tcolorbox}
+\end{figure}
+
+ \begin{figure*}[ht!]
+	 \begin{tcolorbox}
+		 \centering
+		 \includegraphics[width=\textwidth]{./figures/endometrium.png}
+		 \caption{Zmiany w błonie śluzowej macicy powiązane ze zmianami w pęcherzyku jajnikowym. Implantacja blastocysty sama w sobie nie jest konieczna do utrzymania ciałka żółtego \autocite{Krzymowski2005}, ale związane z nią zmiany w strukturze błony śluzowej macicy i w wydzielaniu indukują przekształceniu ciałka żółtego w ciałko żółte ciążowe. Aktywność wydzielnicza endometrium rośnie w czasie wraz z ilością wydzielanego przez ciałko ciążowe progesteronu. Na podstawie (Sadler, 2012)}\label{fig::endometrium}
+	\end{tcolorbox}
+\end{figure*}
+
 \subsection{Wczesna ciąża}
 
-Po zakończeniu pierwszego podziału mitotycznego zygoty, przechodzi ona w serie kolejnych takich podziałów w relatywnie krótkim czasie zwiększając liczbę komórek. Komórki te, zwane blastomerami z każdym kolejnym przedziałem są coraz mniejsze, gdyż rozmiar całego zarodka pozostaje w tym czasie mniej więcej niezmienny.
+Po zakończeniu pierwszego podziału mitotycznego zygoty, przechodzi ona w serie kolejnych takich podziałów w relatywnie krótkim czasie zwiększając liczbę komórek. Komórki te, zwane blastomerami z każdym kolejnym podziałem są coraz mniejsze, gdyż rozmiar całego zarodka pozostaje w tym czasie mniej więcej niezmienny (Rysunek \ref{fig::blastomeres}).
 
+Regulacja procesów kontrolujących właściwy podział blastomerów nie jest do końca poznana, nie ulega jednak wątpliwości, że proces ten musi podlegać ścisłej kontroli, gdyż blastomery wykazują specyficzne wzorce podziałów w czasie bruzdkowania (różne u różnych gatunków). Proponowana była obecność inhibitora interakcji miedzy E-kadherynami i kateninami, który brałby udział w prawidłowym kształtowaniu połączeń między blastomerami i uniemożliwiał przedwczesne przekształcenie moruli w blastulę. Nie ulega wątpliwości że udział w regulacji wczesnych procesów rozwojowych zarodka przed implantacją biorą IGF-I i IGF-II, gdyż są one obecne w dużych ilościach w środowisku rozwoju zarodka. Także matczyne cytokiny wykazują działanie parakrynowe na rozwój zarodka w czasie bruzdkowania. Molekularny mechanizm działania tej regulacji nie jest jednak poznany \autocite{Sadler2012, Bielanska2001, Watson2004}
 
+Stadium przed-implantacyjne trwa od kilku (u gryzoni) do kilkudziesięciu dni (u koni). Samą implantację można podzielić na trzy etapy: etap apozycji, etap adhezji do błony śluzowej macicy i etap inwazji. W fazie apozycji zarodek (w postaci blastocysty u większości ssaków) zajmuje właściwe miejsce w macicy. Zajęcie przez niego tego miejsca jest możliwie dzięki czynnikom chemotaktycznym wydzielanym przez nabłonek śluzowy macicy. Czynnikami tymi są m. in. IL-8 oraz białko chemotaktyczne monocytu 1. Adhezja polega na przylgnięciu zarodka do komórek endometrium przy czym kluczową rolę odgrywają IL-1$\alpha$ i IL-1$\beta$, produkowane przez zarodek. Regulują one ekspresję jednej z podjednostek kompleksu integryn, czyli białek odpowiadający za adhezję komórek. W fazie inwazji zarodek zagłębia się w błonie śluzowej macicy. Umożliwia to działanie enzymów proteolitycznych, w których aktywacji uczestniczą interleukiny (IL-1$\alpha$, IL-1$\beta$, IL-6), czynnik wzrostowy nabłonka (EGF) oraz wspomniane wcześniej integryny. W kontroli całego procesu implantacji uczestniczą także inne hormony -- estrogeny i progesteron, a nawet prolaktyna czy kalcytonina oraz wytwarzana przez zarodek gonadotropina kosmówkowa\footnote{tylko u naczelnych}. Na sam koniec implantacji ważną rolę pełni także VEGF -- czynnik wzrostowy komórek śródbłonka naczyń, który przygotowuje naczynia krwionośne w miejscy implantacji do wytworzenia później łożyska \autocite{Krzymowski2005, Sadler2012, Bielanska2001, Kodaman2004}.
+
+Po implantacji zarodka w błonie śluzowej macicy układ odpornościowy matki ulega wyciszeniu, co zapobiega atakowi immunologicznemu z jego strony na odmienny genetycznie zarodek. Za mechanizm tej immunosupresji odpowiada m. in. progesteron.
+
+Progesteron jest najważniejszym hormonem ciążowym, oprócz immunosupresyjnego działania na organizm matki, odpowiada on za utrzymanie ciąży. We wczesnych fazach ciąży u wszystkich gatunków zwierząt głównym źródłem progesteronu jest ciałko żółte, którego funkcjonowanie zostało omówione wcześniej. U niektórych gatunków zadanie wydzielania progesteronu zostaje szybko przejęte przez łożysko, ale u innych niezakłócone funkcjonowanie ciałka żółtego jest konieczne przez całą ciążę \autocite{Krzymowski2005, Graham1997}.
+
+Zarodki intensywnie wydzielają do środowiska wiele hormonów i substancji regulatorowych, które w znaczący sposób zmieniają funkcjonowanie macicy i innych organów matki, a nawet wpływają na jej zachowanie \autocite{Noirot1975, Rosenblatt1988}. Wytwarzane przez zarodek estrogeny i prostaglandyny (PGF$_{2\alpha}$, PGE$_{2}$. PGI$_{2}$) w pewnym stopniu przenikają do matczynego krwiobiegu, zwiększając ukrwienie macicy.
+
+Wydzielany przez zarodek hormon białkowy przypominający PRL i GH, zwany laktogenem jest kolejną substancją przygotowującą błonę śluzową macicy do implantacji. Bierze on także udział w regulacji angiogenezy w endometrium, a później w łożysku \autocite{Corbacho2002}.
+
+Mimo działania w tych procesach tak wielu hormonów i faktu, że za utrzymanie ciąży odpowiada w pierwszych jej fazach głównie syntezowany przez komórki luteinowe i paraluteinowe progesteron --- przyjmuje się, że sygnałem płodowym odpowiedzialnym za rozpoznanie przez organizm matki ciąży są wytwarzane przez zarodek estrogeny. Hormony te po przeniknięciu do błony śluzowej macicy powodują zmianę kierunku wydzielania PGF$_{2\alpha}$ -- substancja ta przestaje być wydzielana do światła naczyń krwionośnych a zaczyna być wydzialana do światła macicy. Brak tej prostaglandyny we krwi uniemożliwia jej dotarcie do ciałka żółtego, co powstrzymuje proces luteolizy. Jest to główny znany mechanizm hamowania zaniku ciałka żółtego. Inne mechanizmy nie są poznane chociaż pojawiały się badania sugerujące udział hCG w tym procesie\footnote{u kobiet}. który polegałby na regulacji ekspresji genów odpowiedzialnych za luteolizę \autocite{Krzymowski2005, Dickinson2008}.
+
+Taka ścisła interakcja między substancjami regulatorowymi wydzielanymi przez matkę i przez zarodek, umożliwia utrzymanie prawidłowego przebiegu wczesnych faz ciąży. Widać to szczególnie w wypadku rozwoju ciałka żółtego i mechanizmów wpływających na jego utrzymanie i równoczesnych przemianach struktury błony śluzowej macicy (Rysunek \ref{fig::endometrium}).
+
+\subsection{Błony płodowe i łożysko}
+
+W czasie gdy zarodek przechodzi w rozwoju do etapu blastocysty, jego komórki można podzielić na dwie grupy -- komórki tworzące wewnętrzną masę w jamie blastuli nazywa się embrioblastem, a te na zewnątrz, tworzące ,,otoczkę'' blastocelu, nazywa się trofoblastem. Nazwy te nie są przypadkowe gdyż komórki embrioblastu w przyszłości wytworzą właściwy embrion, a komórki trofoblastu wytworzą struktury pełniące wobec embrionu funkcje pomocnicze i odżywcze (\textit{gr. troph\={e}} -- odżywczy, odżywiający), takie jak błony płodowe i łożysko \autocite{Sadler2012, Bielanska2001}
+
+Zadaniem błon płodowych jest zapewnienie łączności między zarodkiem a matką, stworzenie odpowiednich warunków do rozwoju zarodka a później płodu oraz ochrona zarodka. Na pierwszych etapach ciąży trofoblast rozwija się bardzo szybko kosztem embrioblastu, co jest świadectwem tego jak ważna jest rola błon płodowych.
+
+U wszystkich ssaków powstają cztery błony płodowe, które rozwijają się w następującej kolejności
+\begin{enumerate}
+	\item pęcherzyk żółtkowy
+	\item owodnia
+	\item kosmówka
+	\item omocznia
+\end{enumerate}
+
+Pominięta zostanie tutaj dyskusja struktury błon płodowych i tego jak różnią się one między różnymi gatunkami.
+
+Łożysko powstaje poprzez połączenie błon płodowych z błoną śluzową macicy. Pełni ono wiele funkcji, m. in. umożliwia wymianę gazową, odżywczą i wydalniczą między organizmem matki a dziecka, a jednocześnie stanowi swojego rodzaju barierę między krwią matki a dziecka. Jest ono także narządem wydzielniczym. U ludzi już w bardzo wczesnych fazach rozwojowych trofoblast wytwarza hCG, które w dalszych fazach ciąży wytwarzane jest właśnie w łożysku. Również u klaczy około 35-40 dnia ciąży\footnote{czyli biorąc pod uwagę długość ciąży klaczy relatywnie wcześnie} rozpoczyna się powoli poroces syntezy eCG, która tak samo hCG ma działanie zbliżone do FSH i LH. Wspomniany wcześniej laktogen, również powstaje w łożysku, chociaż jego synteza u naczelnych zachodzi już w bardzo wczesnych fazach rozwoju trofoblastu \autocite{Krzymowski2005, Sadler2012}.
 
 \subsection{Późna ciąża}
 
+Działanie progesteronu polega głównie na znoszeniu wrażliwości mięśni gładkich błony mięśniowej macicy na działanie oksytocyny, poprzez hamowanie receptora dla niej. Jest to tak zwany blok progesteronowy. W końcowych fazach ciąży gdy płód jest już gotowy do porodu jego podwzgórze zaczyna wydzielać CRH, który pobudza przysadkę do wydzielania ACTH. ACTH z kolei wzmaga wytwarzanie i wydzielanie glikokortykoidów w korze nadnerczy płodu. Kortykoidy, których poziom na skutek opisanych procesów gwałtownie rośnie przechodzą przez łożysko do orgaznizmu matki.
+
+U zwierząt, u których głównym miejscem wydzielania progesteronu jest łożysko dochodzi do zwiększenia aktywności systemów enzymatycznych przekształcających inne steroidy do estrogenów, na skutek czego rośnie stosunek estradiolu do progesteronu. Pod wpływem zwiększonego stężenia estrogenów następuje przekształcenie błony mięśniowej macicy --- miocyty zaczynają wytwarzać koneksyny, co prowadzi do powstania między nimi połączeń szczelinowych i do ich funkcjonalnego sprzężenia. Takie przekształcenie umożliwia skoordynowane skurcze mięśniówki w czasie porodu. Jednocześnie zwiększa się ilość receptorów oksytocyny w miocytach mięśniówki macicy. Rośnie także aktywność i stężenie kolagenazy w okolicach szyjki macicy. Enzym ten nie jest tam jednak wytwarzany \textit{in situ}, przez fibroblasty, a raczej wydzielają go prawdopodobnie zbierające się w tej lokalizacji leukocyty przenikające z krwi. Na aktywacje kolagenazy w tym czasie może mieć również wpływ rozciąganie tuż przed porodem błon płodowych lub uwalnianie w tym czasie interleukiny 8 \autocite{Krzymowski2005, Mitchell1993, Osmers1992, Rajabi1988, El1996}.
+
+U zwierząt, u których wytwarzenie progesteronu miało miejsce głównie w ciałku żółtym, wysokie stężenie kortykoidów powoduje natomiast zwiększenia wydzielania macicznej prostaglandyny F$_{2\alpha}$, która w wysokim stężeniu może dotrzeć do jajnika, gdzie indukuje luteolizę ciałka żółtego \autocite{Krzymowski2005, Watanabe1994}.
+
 \section{Poród}
 
-\section{Laktacja}
+Gdy organizm matki jest gotowy do porodu rozpoczyna się rozszerzanie szyjki macicy, które jest regulowane przez relaksynę, która uwalniana przed porodem aktywuje enzymy proteolityczne. Enzymy te trawią połączenia między komórkami tkanki łącznej macicy i szyjki macicy, co zwiększa rozciągliwość tych narządów.
+
+Prolaktyna, której poziom przed porodem jest bardzo wysoki nie ma bezpośredniego wpływu na przebieg porodu ale jest niezbędna do rozpoczęcia laktacji.
+
+W tym samym czasie w którym rozszerzana jest szyjka macicy oksytocyna pobudza mięśniówkę macicy do rytmicznych, skoordynowanych skurczów, co jest możliwe dzięki opisanemu już procesowi przebudowy błony mięśniowej macicy przed porodem.
+
+Wspólne działanie tych hormonów i pobudzenie układu nerwowego przywspółczulnego wywołuje rytmiczne, silne skurcze mięśni gładkich macicy i mięśni brzucha. Błony płodowe na skutek wywołanego skurczami wzrostu ciśnienia hydraulicznego pękają. Dochodzi do dalszego rozszerzania dróg rodnych. Skurcze trwają tak długo aż płód zostanie wypchnięty przez drogi rodne na zewnątrz. Po urodzeniu płodu następuje wydalenie (,,urodzenie'') łożyska -- jest to ostatni etap porodu \autocite{Krzymowski2005}.
 
 \section{Podsumowanie}
 
+Skomplikowana regulacja hormonalna procesów ciąży i porodu, a także procesów je poprzedzających, powoduje równie skomplikowane zmiany w funkcjonowaniu organizmu matki i dziecka. Omówienie tego w pełni wymaga znacznie dłuższej pracy. Prawdopodobnie korzystne byłoby, jak wspomniano we wstępie spojrzenie na te zjawiska jako na dynamiczny system biologiczny, w którym występuje wiele wymiarów (poziomów) regulacji -- co związane jest m. in. z kooperatywnym działaniem układu nerwowego i hormonalnego, oraz z niepełnej hierarchiczności regulacji hormonalnej. Skonstruowanie jednak spójnej analizy takiego systemu wykracza poza zakres tego artykułu i umiejętności autora. Toteż niniejsze omówienie tematu podejmuje próbę podkreślenia interakcji między zachodzącymi w czasie ciąży i porodu procesów i mechanizmów ich regulujących, ale pozostaje przy tym raczej tradycyjne w konstrukcji logicznej.
 
 \printbibliography
 
